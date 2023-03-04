@@ -77,14 +77,14 @@ const loadAllAiUniverse = () => {
   };
   //  toggle loader ---
   
-  const toggleLoader = isLoading =>{
-    const loader = document.getElementById('loader');
-    if (isLoading) {
-      loader.classList.remove('d-none')
+//   const toggleLoader = isLoading =>{
+//     const loader = document.getElementById('loader');
+//     if (isLoading) {
+//       loader.classList.remove('d-none')
       
-    }
+//     }
   
-  }
+//   }
   
   loadAllAiUniverse();
   //  hide this spinner ----
