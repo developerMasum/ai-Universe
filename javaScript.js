@@ -6,7 +6,7 @@ const loadAllAiUniverse = (number) => {
 };
 const displayAll = (universes, number) => {
   universes = universes.slice(0, number);
-  console.log(universes);
+  // console.log(universes);
 
   toggleLoader(true);
 
@@ -97,7 +97,7 @@ const fetchDataDetail = (ai_id) => {
   //    console.log(url);
 };
 const displayDataDetails = (details) => {
-  console.log(details);
+  // console.log(details.image_link);
   const fullContainer = document.getElementById("container-all");
   const score = details.accuracy.score;
   const number = score * 100;
