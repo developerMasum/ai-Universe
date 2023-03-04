@@ -30,14 +30,14 @@
   </head>
   <body>
     <header>
-      <h1 class="text-center">Ai Universe Hub</h1>
+      <h1 class="text-center">Ai universe hub</h1>
 
       <!-- <button class="btn-">Sort By Date</button> -->
     </header>
     <main>
       <section>
         <div class="d-flex justify-content-center align-items-center mb-3 mt-3">
-          <button onclick="mySort()" id="btn-sort" type="button" class="btn btn-danger">Sort By Date</button>
+          <button  id="btn-sort" type="button" class="btn btn-danger">Sort By Date</button>
         </div>
       </section>
 
@@ -67,13 +67,24 @@
           
         </div>
         <!-- spinner  --> 
-        <div id="loader" class="d-none" style="height: 400px;" class="d-flex  justify-content-center">
+        <!-- <div id="loader" class="d-none" style="height: 400px;" class="d-flex align-items-center  justify-content-center">
           <div class="spinner-border text-success" role="status">
             <span class="visually-hidden">Loading...</span>
           </div>
-        </div>
+        </div> -->
+
+        
 
 
+      </section>
+
+
+      <section id="loader" class="d-none" style="height: 400px;">
+        <div class="d-flex justify-content-center">
+            <div class="spinner-border" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
       </section>
 
     

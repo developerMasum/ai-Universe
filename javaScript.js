@@ -1,12 +1,26 @@
-const loadAllAiUniverse = () => {
+const loadAllAiUniverse = (number) => {
     const url = `https://openapi.programming-hero.com/api/ai/tools`;
     fetch(url)
       .then((res) => res.json())
-      .then((data) => displayAll(data.data.tools.slice(0, 6)));
+      .then((data) => displayAll(data.data.tools,number));
   };
   
-  const displayAll = (universes) => {
-    console.log(universes[0].published_in);
+  const displayAll = (universes,number) => {
+    universes = universes.slice(0, number);
+    
+    toggleLoader(true);
+
+    document.getElementById('btn-sort').addEventListener('click',function () {
+
+        const newArr = universes.sort((a,b)=> new Date(a.published_in)-new Date(b.published_in));
+        displayAll(newArr);
+    
+
+        
+    });
+
+    
+    // console.log(universes[0].published_in);
   
   
   
@@ -59,6 +73,7 @@ const loadAllAiUniverse = () => {
   
       containerDiv.appendChild(cardDiv);
     });
+    toggleLoader(false);
   };
   
   // show all bepar separ and  button for all data 
@@ -72,7 +87,7 @@ const loadAllAiUniverse = () => {
     // show all button 
   const button = document.getElementById("button-all");
   button.classList.add("d-none");
-  toggleLoader(true);
+ 
    
   };
   //  toggle loader ---
@@ -83,10 +98,15 @@ const loadAllAiUniverse = () => {
       loader.classList.remove('d-none')
       
     }
+    else{
+        loader.classList.add('d-none')
+
+    }
+    
   
   }
   
-  loadAllAiUniverse();
+  loadAllAiUniverse(6);
   //  hide this spinner ----
   
   
