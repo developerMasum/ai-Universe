@@ -151,7 +151,8 @@ const displayDataDetails = (details) => {
                  details.integrations[2]
                    ? details.integrations[2]
                    : "No data found"
-               }</li>
+               }
+               </li>
            </ul>
        </div>
    </div> 
