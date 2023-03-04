@@ -97,7 +97,7 @@ const fetchDataDetail = (ai_id) => {
   //    console.log(url);
 };
 const displayDataDetails = (details) => {
-  // console.log(details.image_link);
+  console.log(details);
   const fullContainer = document.getElementById("container-all");
   const score = details.accuracy.score;
   const number = score * 100;
